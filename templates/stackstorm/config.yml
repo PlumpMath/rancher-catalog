@@ -1,7 +1,0 @@
-name: StackStorm
-description: |
-  StackStorm Template
-version: 0
-category: workflow
-maintainer: Gary Berger
-license: Apache 2.0
