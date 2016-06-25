@@ -2,12 +2,12 @@
   name: "StackStorm"
   version: "v0.1.0-rancher"
   description: "StackStorm version 1.5"
-  # questions:
-  #   - variable: "AWS_ACCESS_KEY"
-  #     label: "AWS access key"
-  #     description: "Access key to your AWS account"
-  #     type: "string"
-  #     required: true
+  questions:
+    - variable: "user"
+      label: "User"
+      description: "User account"
+      type: "string"
+      required: false
   #   - variable: "AWS_SECRET_KEY"
   #     label: "AWS secret key"
   #     description: "Secret key to your AWS account"
