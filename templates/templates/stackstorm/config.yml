@@ -1,7 +1,0 @@
-name: StackStorm
-description: |
-  StackStorm 
-version: 0.1.0
-category: System
-maintainer: Gary Berger
-license: Apache 2.0
