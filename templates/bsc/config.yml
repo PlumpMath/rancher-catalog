@@ -1,0 +1,5 @@
+name: BSC
+description: |
+  Brocade SDN Controller.
+version: 3.2.1
+category: SDN
