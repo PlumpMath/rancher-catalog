@@ -1,0 +1,10 @@
+ bsc:
+    image: 849089551530.dkr.ecr.us-east-1.amazonaws.com/bsc:latest
+    container_name: bsc321
+    ports:
+     - "8181:8181"
+     - "6653:6653"
+     - "5005:5005"
+     - "8101:8101"
+    volumes:
+     -  ~/deploy:/opt/brocade/bsc/controller/deploy/:rw
