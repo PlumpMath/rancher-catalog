@@ -1,6 +1,4 @@
-version: '2'
-services:
-  bsc:
+ bsc:
     image: 849089551530.dkr.ecr.us-east-1.amazonaws.com/bsc:latest
     container_name: bsc321
     ports:
