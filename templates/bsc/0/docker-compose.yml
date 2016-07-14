@@ -1,4 +1,4 @@
- bsc:
+bsc:
     image: takagi:5000/bsc:latest
     ports:
      - "8181:8181"
@@ -14,5 +14,3 @@
   volumes:
     - /opt/brocade/bsc/controller/deploy
   command: /bin/true
-  labels:
-    io.rancher.container.start_once: true
