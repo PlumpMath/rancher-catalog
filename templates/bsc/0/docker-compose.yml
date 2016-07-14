@@ -8,7 +8,7 @@
     volumes_from:
      - 'bsc-data'
 
-bsc-data:
+ bsc-data:
   image: takagi:5000/bsc:latest
   net: none
   volumes:
