@@ -1,10 +1,19 @@
-bsc:
+bsc-server:
+  ports:
+  - 22:22/tcp
+  - 80:80/tcp
+  labels:
+    io.rancher.sidekicks: bsc-data
   image: takagi:5000/bsc:latest
-  ports: ['8181:8181', '6653:6653', '5005:5005', '8101:8101']
-  volumes_from: [bsc-data]
+  volumes_from:
+  - bsc-data
+
 bsc-data:
-  command: /bin/true
+  labels:
+    io.rancher.container.start_once: 'true'
+  entrypoint:
+  - /bin/true
+  hostname: bscdata
   image: takagi:5000/bsc:latest
-  labels: {io.rancher.container.start_once: true}
-  net: none
-  volumes: [/opt/brocade/bsc/controller/deploy]
+  volumes:
+  - /var/log/
