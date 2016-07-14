@@ -5,5 +5,13 @@
      - "6653:6653"
      - "5005:5005"
      - "8101:8101"
-    volumes:
-     -  ~/deploy:/opt/brocade/bsc/controller/deploy/:rw
+    volumes-from:
+     - 'bsc-data'
+bsc-data:
+  image: takagi:5000/bsc:latest
+  net: none
+  volumes:
+    - /opt/brocade/bsc/controller/deploy
+  command: /bin/true
+  labels:
+    io.rancher.container.start_once: true
