@@ -5,7 +5,7 @@
      - "6653:6653"
      - "5005:5005"
      - "8101:8101"
-    volumes-from:
+    volumes_from:
      - 'bsc-data'
 
 bsc-data:
