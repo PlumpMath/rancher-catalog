@@ -14,3 +14,5 @@ bsc:
   volumes:
     - /opt/brocade/bsc/controller/deploy
   command: /bin/true
+  labels:
+    io.rancher.container.start_once: true
