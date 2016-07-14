@@ -1,18 +1,10 @@
 bsc:
-    image: takagi:5000/bsc:latest
-    ports:
-     - "8181:8181"
-     - "6653:6653"
-     - "5005:5005"
-     - "8101:8101"
-    volumes_from:
-     - 'bsc-data'
-
- bsc-data:
   image: takagi:5000/bsc:latest
-  net: none
-  volumes:
-    - /opt/brocade/bsc/controller/deploy
+  ports: ['8181:8181', '6653:6653', '5005:5005', '8101:8101']
+  volumes_from: [bsc-data]
+bsc-data:
   command: /bin/true
-  labels:
-    io.rancher.container.start_once: true
+  image: takagi:5000/bsc:latest
+  labels: {io.rancher.container.start_once: true}
+  net: none
+  volumes: [/opt/brocade/bsc/controller/deploy]
