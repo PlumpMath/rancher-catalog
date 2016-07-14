@@ -1,5 +1,5 @@
  bsc:
-    image: takagi:5000/bsc
+    image: takagi:5000/bsc:latest
     ports:
      - "8181:8181"
      - "6653:6653"
