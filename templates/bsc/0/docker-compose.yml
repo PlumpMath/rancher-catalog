@@ -20,5 +20,5 @@ bsc-data:
   hostname: bscdata
   image: takagi:5000/bsc:latest
   volumes:
-  - data:/opt/brocade/bsc/controller/deploy
+  - data:/opt/brocade/bsc/controller
   volume_driver: convoy-nfs
