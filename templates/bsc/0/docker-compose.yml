@@ -9,16 +9,20 @@ bsc-server:
   labels:
     io.rancher.sidekicks: bsc-data
   image: takagi:5000/bsc:latest
-  volumes_from:
-  - bsc-data
-
-bsc-data:
-  labels:
-    io.rancher.container.start_once: 'true'
-  entrypoint:
-  - /bin/true
-  hostname: bscdata
-  image: takagi:5000/bsc:latest
   volumes:
-  - data:/opt/brocade/bsc/controller
+   - data:/opt/brocade/bsc/controller
   volume_driver: convoy-nfs
+
+#   volumes_from:
+#   - bsc-data
+
+# bsc-data:
+#   labels:
+#     io.rancher.container.start_once: 'true'
+#   entrypoint:
+#   - /bin/true
+#   hostname: bscdata
+#   image: takagi:5000/bsc:latest
+#   volumes:
+#   - data:/opt/brocade/bsc/controller
+#   volume_driver: convoy-nfs
