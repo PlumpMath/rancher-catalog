@@ -1,4 +1,4 @@
 .catalog:
   name: "BSC"
-  version: "v0.1.0-bsc"
+  version: "v0.1.2-bsc"
   description: "Brocade SDN Controller 3.2.1"
