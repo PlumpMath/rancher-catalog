@@ -14,6 +14,17 @@ bsc-server:
   volumes_from:
   - bsc-data
 
+netopeer:
+  tty: true
+  stdin_open: true
+  ports:
+    - 830:830
+  image: takagi:5000/netopeer:latest
+  volumes:
+    - data1:/usr/etc/netopeer
+  volume_driver: convoy-nfs
+
+
 bsc-data:
   labels:
     io.rancher.container.start_once: 'true'
