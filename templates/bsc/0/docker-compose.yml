@@ -9,10 +9,6 @@ bsc-server:
   labels:
     io.rancher.sidekicks: bsc-data
   image: takagi:5000/bsc:latest
-  # volumes:
-  #  - data:/opt/brocade/bsc/controller
-  # volume_driver: convoy-nfs
-
   volumes_from:
   - bsc-data
 
@@ -23,6 +19,7 @@ bsc-data:
   - /bin/true
   hostname: bscdata
   image: takagi:5000/bsc:latest
-  # volumes:
-  # - data:/opt/brocade/bsc/controller
-  # volume_driver: convoy-nfs
+  volumes:
+  - data1:/opt/brocade/bsc/controller/data
+  - data1:/opt/brocade/bsc/controller/deploy
+  volume_driver: convoy-nfs
