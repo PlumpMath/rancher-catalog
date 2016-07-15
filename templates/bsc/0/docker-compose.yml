@@ -21,5 +21,4 @@ bsc-data:
   image: takagi:5000/bsc:latest
   volumes:
   - data:/opt/brocade/bsc/controller/deploy
-  - logs:/opt/brocade/bsc/controller/logs
   volume_driver: convoy-nfs
