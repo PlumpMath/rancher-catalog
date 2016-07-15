@@ -6,8 +6,8 @@ bsc-server:
   - 6653:6653/tcp
   - 5005:5005/tcp
   - 8101:8101/tcp
-  labels:
-    io.rancher.sidekicks: bsc-data
+  # labels:
+  #   io.rancher.sidekicks: bsc-data
   image: takagi:5000/bsc:latest
   volumes:
    - data:/opt/brocade/bsc/controller
