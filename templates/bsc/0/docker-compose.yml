@@ -1,4 +1,6 @@
 bsc-server:
+  tty: true
+  stdin_open: true
   ports:
   - 8181:8181/tcp
   - 6653:6653/tcp
@@ -18,5 +20,6 @@ bsc-data:
   hostname: bscdata
   image: takagi:5000/bsc:latest
   volumes:
-  - /var/log/
-  - /opt/brocade/bsc/controller/log
+  - deploy:/opt/brocade/bsc/controller/deploy
+  - log:/opt/brocade/bsc/controller/logs
+  volume_driver: convoy-nfs
